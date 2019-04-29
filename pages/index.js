@@ -20,7 +20,7 @@ export default class extends React.Component {
 
   static async getHomePage(req) {
     try {
-      // Initializes the API, including the preview information if there's any
+      // Initializes the API, including the preview information and access token if there's any
       const API = await Prismic.getApi(apiEndpoint, { req, accessToken });
       // Queries both the homepage and navigation menu documents
       const document = await API.getSingle('homepage');
