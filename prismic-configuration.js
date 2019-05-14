@@ -6,23 +6,23 @@ module.exports = {
 
   // -- Access Token if the repository is not public
   // Generate a token in your dashboard and configure it here if your repository is private
-  //accessToken: '########',
-  
+  // accessToken: '########',
+
   // -- Link resolution rules
   // Manages links to internal Prismic documents
   // Modify as your project grows to handle any new routes you've made
-  linkResolver: function(doc) {
+  linkResolver: function (doc) {
     if (doc.type === 'page') {
-      return `/${doc.uid}`;
+      return `/${doc.uid}`
     }
-    return '/';
+    return '/'
   },
 
   // Additional helper function for Next/Link component
-  hrefResolver: function(doc) {
+  hrefResolver: function (doc) {
     if (doc.type === 'page') {
-      return `/page?uid=${doc.uid}`;
+      return `/page?uid=${doc.uid}`
     }
     return '/'
   }
-};
+}

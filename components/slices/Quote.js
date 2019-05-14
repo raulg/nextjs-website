@@ -1,9 +1,9 @@
-import React, { Fragment } from 'react';
-import { RichText } from 'prismic-reactjs';
+import React, { Fragment } from 'react'
+import { RichText } from 'prismic-reactjs'
 
 const Quote = ({ slice }) => (
   <Fragment>
-    <section className="content-section quote">
+    <section className='content-section quote'>
       <blockquote>
         {RichText.asText(slice.primary.quote_text)}
       </blockquote>
@@ -43,6 +43,6 @@ const Quote = ({ slice }) => (
       }
     `}</style>
   </Fragment>
-);
+)
 
-export default Quote;
+export default Quote

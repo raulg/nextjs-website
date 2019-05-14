@@ -1,10 +1,10 @@
-import React, { Fragment } from 'react';
-import { RichText } from 'prismic-reactjs';
-import { linkResolver } from 'prismic-configuration';
-import htmlSerializer from 'utils/htmlSerializer';
+import React, { Fragment } from 'react'
+import { RichText } from 'prismic-reactjs'
+import { linkResolver } from 'prismic-configuration'
+import htmlSerializer from 'utils/htmlSerializer'
 
 const TextSection = ({ slice }) => {
-  const sectionClass = slice.slice_label ? 'text-section-' + slice.slice_label : 'text-section-1col';
+  const sectionClass = slice.slice_label ? 'text-section-' + slice.slice_label : 'text-section-1col'
   return (
     <Fragment>
       <section className={`content-section ${sectionClass}`}>
@@ -43,7 +43,7 @@ const TextSection = ({ slice }) => {
         }
       `}</style>
     </Fragment>
-  );
+  )
 }
 
-export default TextSection;
+export default TextSection

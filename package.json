@@ -9,8 +9,8 @@
   },
   "devDependencies": {
     "express": "^4.16.4",
-    "nodemon": "^1.18.11",
-    "now": "^15.0.8"
+    "nodemon": "^1.19.0",
+    "now": "^15.2.0"
   },
   "dependencies": {
     "next": "^8.1.0",

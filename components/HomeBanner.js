@@ -1,32 +1,32 @@
-import React, { Fragment } from "react"
+import React, { Fragment } from 'react'
 import { default as NextLink } from 'next/link'
 import { Link, RichText } from 'prismic-reactjs'
 import { linkResolver, hrefResolver } from 'prismic-configuration'
 
 const HomeBanner = ({ banner }) => {
-  let internalLink = banner.button_link.link_type == "Document";
+  let internalLink = banner.button_link.link_type === 'Document'
   // Determines if the link is for an internal document or an external resource
   // so it can be handled accordingly
   return (
     <Fragment>
       <section
-        className="homepage-banner"
+        className='homepage-banner'
         style={{
           backgroundImage:
-            "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url(" +
+            'linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url(' +
             banner.image.url +
-            ")"
+            ')'
         }}
       >
-        <div className="banner-content container">
-          <h2 className="banner-title">{RichText.asText(banner.title)}</h2>
-          <p className="banner-description">
+        <div className='banner-content container'>
+          <h2 className='banner-title'>{RichText.asText(banner.title)}</h2>
+          <p className='banner-description'>
             {RichText.asText(banner.tagline)}
           </p>
-          {RichText.asText(banner.button_label) !== "" ? (
+          {RichText.asText(banner.button_label) !== '' ? (
             // Displays the button link only if it's been defined
             <NextLink
-              as={internalLink ? linkResolver(banner.button_link) : ""}
+              as={internalLink ? linkResolver(banner.button_link) : ''}
               // No need to change how the route is shown if it's external
               href={
                 internalLink
@@ -37,12 +37,12 @@ const HomeBanner = ({ banner }) => {
               passHref
             >
               {/* Handles the link client-side if it's a Prismic document, otherwise it's just a regular href */}
-              <a className="banner-button">
+              <a className='banner-button'>
                 {RichText.asText(banner.button_label)}
               </a>
             </NextLink>
           ) : (
-            ""
+            ''
           )}
         </div>
       </section>
@@ -95,7 +95,7 @@ const HomeBanner = ({ banner }) => {
         }
       `}</style>
     </Fragment>
-  );
-};
+  )
+}
 
-export default HomeBanner;
+export default HomeBanner

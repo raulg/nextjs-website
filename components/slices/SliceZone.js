@@ -1,33 +1,33 @@
-import React from 'react';
-import { 
-  TextSection, 
-  Quote, 
-  FullWidthImage, 
-  ImageGallery, 
-  ImageHighlight,
-} from './';
+import React from 'react'
+import {
+  TextSection,
+  Quote,
+  FullWidthImage,
+  ImageGallery,
+  ImageHighlight
+} from './'
 
 const SliceZone = ({ sliceZone }) => {
   return (
-    <div className="container">
+    <div className='container'>
       {sliceZone.map((slice, index) => {
         switch (slice.slice_type) {
-          case ("text_section"):
+          case ('text_section'):
             return <TextSection slice={slice} key={'slice-' + index} />
-          case ("quote"):
+          case ('quote'):
             return <Quote slice={slice} key={'slice-' + index} />
-          case ("full_width_image"):
+          case ('full_width_image'):
             return <FullWidthImage slice={slice} key={'slice-' + index} />
-          case ("image_gallery"):
+          case ('image_gallery'):
             return <ImageGallery slice={slice} key={'slice-' + index} />
-          case ("image_highlight"):
+          case ('image_highlight'):
             return <ImageHighlight slice={slice} key={'slice-' + index} />
           default:
-            return null;
+            return null
         }
       })}
     </div>
-  );
+  )
 }
 
-export default SliceZone;
+export default SliceZone

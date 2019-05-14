@@ -17,24 +17,24 @@ const MenuLinks = ({ menu }) => (
           <a>{RichText.asText(menuLink.label)}</a>
         </NextLink>
       </li>
-    );
+    )
   })
-);
+)
 
 const Header = (menu) => (
   <Fragment>
-    <header className="site-header">
-      <NextLink href="/" passHref prefetch>
-        <a><div className="logo">Example Site</div></a>
+    <header className='site-header'>
+      <NextLink href='/' passHref prefetch>
+        <a><div className='logo'>Example Site</div></a>
       </NextLink>
       <nav>
         <ul>
-          <MenuLinks {...menu}/>
+          <MenuLinks {...menu} />
         </ul>
       </nav>
     </header>
     <style jsx global>{ header }</style>
   </Fragment>
-);
+)
 
-export default Header;
+export default Header
