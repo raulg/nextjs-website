@@ -20,8 +20,8 @@
     "react-dom": "^16.8.6"
   },
   "scripts": {
-    "dev": "nodemon server.js",
-    "now-dev": "now dev",
+    "dev": "now dev",
+    "nodev": "nodemon server.js",
     "now-build": "next build",
     "deploy": "now"
   },
