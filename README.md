@@ -1,7 +1,7 @@
 [![Dependency Status](https://david-dm.org/raulg/nextjs-website.svg)](https://david-dm.org/raulg/nextjs-website)
 
 # nextjs-website
-This project is an implementation of the Prismic multi-page website demo using Next.js. Built up from the starter project, it's meant to provide you with an idea of how to build your own sites using the Prismic features. Read our user guide if you need guidance on how to use this repository.
+This project is an implementation of the Prismic multi-page website demo using Next.js. Built up from the starter project, it's meant to provide you with an idea of how to build your own sites using the Prismic features. Read our [user guide](https://user-guides.prismic.io/examples/next-js-samples/sample-multi-page-site-with-navigation-in-nextjs) if you need guidance on how to use this repository.
 This project is serverless and ready for deployment in Now v2.
 
 ### Getting started quickly with Prismic Themes
@@ -9,7 +9,7 @@ You can use our [Prismic-CLI](https://github.com/prismicio/prismic-cli) tool to 
 
 ```
 > $ npm install -g prismic-cli
-> $ prismic theme https://github.com/raulg/nextjs-website/
+> $ prismic theme https://github.com/prismicio/nextjs-website/
 ```
 
 ### Install dependencies
@@ -36,7 +36,7 @@ or
 ### Alternative local development mode
 If your workflow favors working with Node, you can run the included Express server file which will handle the same custom routing needs. Keep in mind that the routes defined here are different from the ones defined in `now.json`, make sure to replicate and check your routing before deploying to production on Now. Development server will be running in `http://localhost:3000/` 
 ```
-> $ npm run nodev
+> $ npm run node-dev
 ```
 
 ### Deploy to Now 2.0 serverless mode
