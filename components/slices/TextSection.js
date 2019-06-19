@@ -1,14 +1,14 @@
 import React, { Fragment } from 'react'
 import { RichText } from 'prismic-reactjs'
-import { linkResolver } from 'prismic-configuration'
-import htmlSerializer from 'utils/htmlSerializer'
+import { linkResolver, customLink } from 'prismic-configuration'
 
 const TextSection = ({ slice }) => {
   const sectionClass = slice.slice_label ? 'text-section-' + slice.slice_label : 'text-section-1col'
   return (
     <Fragment>
       <section className={`content-section ${sectionClass}`}>
-        {RichText.render(slice.primary.rich_text, linkResolver, htmlSerializer)}
+        <RichText render={slice.primary.rich_text} linkResolver={linkResolver}
+          serializeHyperlink={customLink} />
       </section>
       <style jsx>{`
         .text-section-2col {

@@ -9,8 +9,8 @@ const ImageHighlight = ({ slice }) => {
     <Fragment>
       <section className='highlight content-section'>
         <div className='highlight-left'>
-          {RichText.render(slice.primary.title, linkResolver)}
-          {RichText.render(slice.primary.headline, linkResolver)}
+          <RichText render={slice.primary.title} linkResolver={linkResolver} />
+          <RichText render={slice.primary.headline} linkResolver={linkResolver} />
           {RichText.asText(slice.primary.link_label) !== '' ? (
             <p>
               <NextLink
